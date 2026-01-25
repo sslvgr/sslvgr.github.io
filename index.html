@@ -57,10 +57,66 @@
         }
 
         h1 {
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 2.5rem;
+            font-weight: 800;
             margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
+            color: var(--text-primary);
+        }
+
+        .name-highlight {
+            color: var(--accent-color);
+        }
+
+        .greeting {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .wave {
+            display: inline-block;
+            animation: wave 2.5s infinite;
+            transform-origin: 70% 70%;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: rotate(0.0deg)
+            }
+
+            10% {
+                transform: rotate(14.0deg)
+            }
+
+            20% {
+                transform: rotate(-8.0deg)
+            }
+
+            30% {
+                transform: rotate(14.0deg)
+            }
+
+            40% {
+                transform: rotate(-4.0deg)
+            }
+
+            50% {
+                transform: rotate(10.0deg)
+            }
+
+            60% {
+                transform: rotate(0.0deg)
+            }
+
+            100% {
+                transform: rotate(0.0deg)
+            }
         }
 
         h2 {
@@ -190,9 +246,15 @@
     <main class="container">
         <div class="profile-card">
             <header>
-                <h1>Igor Suslov</h1>
-                <h2>Lead Software Developer (C#/.NET)</h2>
-                <p class="location">Almaty, Kazakhstan</p>
+                <div class="greeting">Hello! <span class="wave">👋</span></div>
+                <h1>I'm <span class="name-highlight">Igor Suslov</span></h1>
+                <h2>Senior Software Engineer</h2>
+                <p class="location">
+                    <svg viewBox="0 0 16 16" aria-hidden="true" style="margin-right: 4px;">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                    </svg>
+                    Almaty, Kazakhstan
+                </p>
             </header>
 
             <nav class="links">
