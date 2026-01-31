@@ -33,6 +33,7 @@ jobs:
             --remove-script-type-attributes \
             --remove-style-link-type-attributes \
             --minify-css true \
+            --minify-js true \
             -o dist/index.html
           if [ -f style.css ]; then
             cleancss -o dist/style.css style.css
